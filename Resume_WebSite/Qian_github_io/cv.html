@@ -1,34 +1,49 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>C V</title>
     <link rel="stylesheet" href="css/main.css" /> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    
+    <script>
+    $(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+        } else {
+            $(".item").addClass("active");
+        }
+        });
+    });
+    </script>
 </head>
-
-
 <body>
-    <nav id="top-nav">
-        <div class="logo">
-            <h4>Personal Website</h4>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">CV</a></li>
+    <nav class="top-nav">
+        <ul class="menu">
+            <li class="logo"><a href="#">Personal Website</a></li>
+            <li class="item"><a href="index.html">Home</a></li>
+            <li class="item"><a href="#">About</a></li>
+            <li class="item"><a href="#">CV</a></li>
+            <li class="item"><a href="#">Projects</a></li>
+            
+            <li class="toggle"><span class="bars"></span></li>
         </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
     </nav>
+    
     <div id="page-container">
-    <main>
-        
-        
-
-        <div id="cv-info">
+        <main>
+            
+            
+    
+            
             <div id="education">
                 <table>
                     <tr>
@@ -91,7 +106,7 @@
                         <td style="width: 50%;"><b>Peer Tutor</b><br><i>Academic Success Center,<br>Minneapolis College</i></td>
                         <td>
                             <ul>
-                            <li>Working one-on-one with students.</li>
+                            <li class='bullet'>Working one-on-one with students.</li>
                             <li>Tutoring courses:</li>
                             <ul>
                                 <li style="font-size: small;">Python</li>
@@ -190,26 +205,19 @@
                     <tr height="100px;"></tr>
                 </table>
             </div>
-
-
-
+               
+           
+    
+        </main>
         </div>
-
-        
-
-       
-
-    </main>
-    <footer>
-        <div class="container" style="font-size: small;">
-            &copy; 2020 - Hui Qian Tan
-        </div>
-    </footer>
-
-</div>
+    
+        <footer>
+            <div class="container" style="font-size: small;">
+                &copy; 2020 - Hui Qian Tan
+            </div>
+        </footer>
 
 
 
-    <script src="js/main.js"></script>
 </body>
 </html>
